@@ -1,0 +1,453 @@
+﻿div#wrapper {
+	margin: 0px auto;
+	width: 70%;
+	min-width:600px;
+	padding-top: 0.3em;
+	box-shadow: 0px 0px 4px 4px lightgray;
+	/*fallback for browser not supporting shadow*/
+	border-left:1px solid #AAAAAA; 
+	border-right:1px solid #AAAAAA;
+	
+}
+
+body {	
+	font-family:sans-serif;
+	margin:0px;
+}
+
+div#div_main{
+	position:relative;	
+}
+
+div#div_header{
+	font-size: 2em;
+	padding:0.7em;
+	background-color: white;
+	color:white;
+	background-image: url('wood-material-background-wallpaper-texture-concept_53876-42925.avif');
+	background-size: cover;
+}
+
+div#div_subhead{
+	background-color:#F577A6;
+	border-bottom: 1px solid #333438;
+}
+
+div#div_left{
+	position:absolute;
+	top:0px;
+	left:0px;
+	bottom:0px;
+	width:10%;
+	background-color:#F5E1E9;
+	border-right: 1px solid #F577A6;
+}
+
+div#div_content{	
+	background-color:white;
+	width:80%;
+	margin-left:10%;
+	padding:1em 0em;
+	min-height: 400px;
+}
+
+div#div_footer{
+	border-top: 3px solid #F577A6;
+	text-align:center;
+	padding:1em;
+}
+
+
+
+ul#menu{
+	list-style-type: none;
+	font-size:0.9em;
+	margin:0;
+	padding:0.6em;
+}
+
+#menu li{
+	text-align:center;
+	display:inline;
+	border-right: 1px dashed white;
+}
+
+#menu a{
+	font-family: Verdana, sans-serif;
+	padding:0.6em;
+	color:white;
+}
+
+#menu a:link, #menu a:visited{
+	text-decoration: none;
+}
+
+#menu a:hover, #menu a:active{
+	text-decoration:underline;
+	background-color:#DE4B82;
+}
+
+h2{
+	color: #CE658B;	
+	margin-top:0.4em;
+	margin-bottom:0.4em;	
+	padding-left: 1em;
+	border-bottom:2px dotted #F5C8DA;
+}
+
+.form label{
+	display: block;
+	text-align:right;
+	font-weight:bold;
+	width:200px;
+	float:left;
+	margin-right:10px;
+}
+
+.form input{
+	padding: 4px 2px;
+	margin: 2px 2px 10px 10px;
+}
+
+.form input[type="text"], .form input[type="password"]{
+	display:block;
+	width:200px;	
+}
+.form input[type="submit"]{
+	width:150px;
+}
+
+.form input[type="checkbox"]{
+	display:block;
+}
+
+.form select{
+	padding: 4px 2px;
+	display:block;
+	margin: 2px 2px 10px 10px;
+}
+
+.center{
+	text-align:center;
+}
+
+
+.usergroup th{
+	border: 1px solid black;
+	background-color: #F577A6;
+}
+.usergroup td{
+	border: 1px solid black;
+	
+}
+.usergroup table{
+	border-collapse: collapse;
+	margin-left: 20px;
+	width: 100%;
+}
+
+
+
+
+
+
+
+/*
+css for book page don't confuse!!!
+*/
+
+  .book-management {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #f0f0f0;
+    }
+    
+    .header-section h2 {
+        margin: 0;
+        color: #2c3e50;
+        font-size: 28px;
+    }
+    
+    .add-book-btn {
+        background: linear-gradient(to right, #4CAF50, #45a049);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .add-book-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .search-filter {
+        display: flex;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+    
+    .search-box {
+        flex: 1;
+        position: relative;
+    }
+    
+    .search-box input {
+        width: 100%;
+        padding: 12px 15px 12px 40px;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+    
+    .search-box::before {
+        content: "🔍";
+        position: absolute;
+        left: 15px;
+        top: 12px;
+    }
+    
+    .filter-dropdown {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        background: white;
+        min-width: 150px;
+    }
+    
+    .add-book-form {
+        display: none;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .add-book-form.active {
+        display: block;
+    }
+    
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-group label {
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #555;
+    }
+    
+    .form-group input, .form-group select {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    
+    .form-actions {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.2s;
+    }
+    
+    .btn-primary {
+        background: #4CAF50;
+        color: white;
+    }
+    
+    .btn-secondary {
+        background: #f1f1f1;
+        color: #333;
+    }
+    
+    .books-table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .books-table th {
+        background: #4CAF50;
+        color: white;
+        text-align: left;
+        padding: 15px;
+        font-weight: 600;
+    }
+    
+    .books-table td {
+        padding: 15px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .books-table tr:hover {
+        background-color: #f9f9f9;
+    }
+    
+    .books-table tr:last-child td {
+        border-bottom: none;
+    }
+    
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+    }
+    
+    .action-buttons a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #f0f0f0;
+        text-align: center;
+        line-height: 32px;
+        transition: all 0.2s;
+    }
+    
+    .action-buttons a:hover {
+        transform: scale(1.1);
+    }
+    
+    .edit-btn:hover {
+        background: #2196F3;
+    }
+    
+    .delete-btn:hover {
+        background: #f44336;
+    }
+    
+    .status-message {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+    
+    .status-success {
+        background: #dff0d8;
+        color: #3c763d;
+        border: 1px solid #d6e9c6;
+    }
+    
+    .status-error {
+        background: #f2dede;
+        color: #a94442;
+        border: 1px solid #ebccd1;
+    }
+    
+    .book-count {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #666;
+        text-align: right;
+    }
+    
+    .book-card {
+        display: none;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    
+    .book-card.active {
+        display: grid;
+    }
+    
+    .book-item {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .book-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .book-cover {
+        height: 200px;
+        background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .book-info {
+        padding: 15px;
+    }
+    
+    .book-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    
+    .book-author {
+        color: #666;
+        margin-bottom: 10px;
+    }
+    
+    .book-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #888;
+        margin-bottom: 10px;
+    }
+    
+    .view-toggle {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 15px;
+    }
+    
+    .toggle-btn {
+        background: #f0f0f0;
+        border: none;
+        padding: 8px 12px;
+        margin-left: 5px;
+        cursor: pointer;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .toggle-btn.active {
+        background: #4CAF50;
+        color: white;
+    }
